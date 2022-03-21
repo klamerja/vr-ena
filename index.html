@@ -11,16 +11,22 @@
         <a-plane color="#5aad00" height="20" width="20" rotation="-90 0 0"></a-plane>
         <a-sky color="#1adbc8"></a-sky>
         
-        <a-entity id="rig"
+        <a-entity
+        id="rig"
         movement-controls="controls: checkpoint"
         checkpoint-controls="mode: animate">
-            <a-entity camera
-            position="0 1.6 0"
-            look-controls="pointerLockEnabled: true">
+        <a-box
+        checkpoint
+        position="0 0 7"
+    ></a-box>
+            <a-entity
+                camera
+                position="0 1.6 0"
+                look-controls="pointerLockEnabled: true">
             </a-entity>
         </a-entity>
-        <a-box checkpoint
-        position="0 7 0"></a-box>
+        
+
     </a-scene>
 </body>
 </html>
