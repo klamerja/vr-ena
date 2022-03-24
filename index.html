@@ -9,7 +9,9 @@
     <title>VR-ENA</title>
 </head>
 <body>
-    <a-scene>
+    <a-scene debug stats 
+    vr-mode-ui="enabled: true"
+    renderer="antialias: true; sortObjects: true; highRefreshRate: true">
         <!--Assets-->
         <a-assets>
             <audio src="assets/audio/ambient.mp3" id="ambient"></audio>
@@ -19,22 +21,34 @@
         <a-plane color="#5aad00" height="20" width="20" rotation="-90 0 0"></a-plane>
         <a-sky color="#1adbc8"></a-sky>
 
+        <a-entity tpmenu>
+            <option value="ciao">mondo</option>
+        </a-entity>
+
         <!--Rig-->
         <a-entity id="rig"
         movement-controls="controls: checkpoint"
         checkpoint-controls="mode: animate">
+
             <a-entity id="camera" camera
             position="0 1.6 0"
             look-controls="pointerLockEnabled: true">
             </a-entity>
+
+            <!--Second camera-->
+            <a-camera id="secondCamera"
+            camera="active: false"
+            position="25 10 0"></a-camera>
             
-            <a-entity laser-controls
+            <!--Hand-->
+            <a-entity laser-controls="hand: right"
             cursor="fuse: false"
             raycaster="lineColor: red; lineOpacity: 0.5"
             tpmenu></a-entity>
 
             <a-sound src="#ambient" autoplay="true"></a-sound>
         </a-entity>
+
 
         <a-box color="#ffffff"
         position="2 2 0"

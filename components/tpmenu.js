@@ -4,11 +4,17 @@ AFRAME.registerComponent('tpmenu', {
     init: function () {
         let data = this.data;
         let el = this.el;
+        console.log(el.childNodes)
+    }
+})
 
-        el.addEventListener("gripdown", function() {
-        })
+AFRAME.registerComponent('tp', {
+    schema: { type: 'string' },
 
-        el.addEventListener("gripup", function() {
-        })
+    init: function () {
+        this.el.addEventListener('gripChanged', ()=>{
+            let secondCameraEl = document.querySelector('#secondCamera');
+            secondCameraEl.setAttribute('camera', 'active', 'true');
+        });
     }
 })

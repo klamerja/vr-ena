@@ -1,3 +1,6 @@
 - Implementare A-FRAME con ottimizzazioni
 - Effetti Hover per cursore (quando si passa sopra a un checkpoint, il cursore cambia)
 - Sesso https://aframe.io/docs/1.3.0/components/link.html
+- Modificare grafica bottoni
+- POI e cartelli informativi
+-Per cambio camera https://aframe.io/docs/1.3.0/components/camera.html
